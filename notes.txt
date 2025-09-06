@@ -1,0 +1,56 @@
+documentation - website: react.dev
+
+react + react-dom => for web
+react + react-native => for app
+
+### how to make a react project ??
+
+npm = node pacakage manager
+npx = node package executor [for direct use w/o installation]
+
+create-react-app [bulky utility]
+
+---> npx create-react-app <project-name>
+
+as it was bulky, we use binders like vite
+
+open package.json : entry point [ name, version, dependencies ]
+
+testing library, react, react-dom, react-scripts, web-vitals [to check/track performance of your app], scripts [run or ready the projects] (start: in dev env, build: in prod env, test: to test, eject: eject application from react, now introducing new framework), eslint [ red error lines ], browserlist [ which browsers to work on ]
+
+
+## how to run
+
+run start script
+
+---> npm run start
+
+lets run build
+
+---> npm run build
+
+build folder is created
+
+[static assets, js etc]
+
+
+### using bundler - vite
+
+npm create vite@latest
+
+
+### differences
+
+node_modules not in vite project
+
+package.json
+
+[ name, version, scripts - dev (npm run dev), dependencies - only react and react-dom, dev depndencies - used during dev only not prod ]
+
+### run this
+---> cd <project-name>
+---> npm install
+---> npm run dev
+
+
+from project created with create-react-app, delete all folders of src except App.js and index.js
