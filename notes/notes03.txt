@@ -1,0 +1,108 @@
+-------------------- REACT 03 --------------------
+
+- react -> means js -> to run it -> injection of js into html is done -> HOW ???
+- <script> tag is necessary for js to interact with html BUT EXCEPTION IS THERE
+
+### PROJECT STRUCTURE of create-react-app
+
+- node_modules: all modules and packages upon which react depends, and other third party packages we will install
+- public: in this, we put all assets file like html, icons, images, manifest.json(used for mobile devices), robots.txt(for search engine) ...
+    - index.html
+    - SPA
+    - on that single html pg, we perform DOM manipulation using react
+- src:
+    App.css, index.css: css code
+    App.js, index.js(entry point): components file
+- .gitignore: allows to ignore files and folders to git
+- package.lock.json: dependenecies are locked, i.e. this version would be same or locked throughout project
+- Readme.md: summary of proj
+index.html: html content
+- package.json: metadata of project like name, version, description, scripts etc
+
+### INDEX.HTML
+
+- no injection of js into html till now
+
+### INDEX.JS
+
+- imported react(takes references of elements), react dom: used for dom manipulation
+- react creates its own dom(tree str): called as virtual DOM
+- compares virtual dom with main dom
+- check differences and change them only
+- ReactDOM.createRoot(<where>)
+- broswer renders dom
+- similarly, render html elements
+
+
+# React → Creates UI components, handles Virtual DOM.
+# ReactDOM → Connects React with real browser DOM.
+# App → Main/root component of the project that contains your whole website/app.
+# document.getElementById('root') → Finds <div id="root"></div> in HTML.
+# ReactDOM.createRoot() → Creates a React "root" (inside the html element)where all your React components will appear inside the real webpage.
+# root.render() → Displays the component(s) inside the root area or on screen.
+# <React.StrictMode> → Developer tool; checks for potential issues.
+
+### APP.JS
+- function -> return html -> export
+- render that 
+- => writing html through js
+
+### JS NOT LOADED INTO HTML ANYWHERE
+
+- react-scripts into package.json
+- it internally loads main.js into index.html
+
+
+### AT ALL
+- html pg -> react area in it -> react components into it
+- html pg (index.html)
+- inject react (index.js -> root)   
+    reactdom.createRoot(<select html element>)
+- render components upon that react area 
+    root.render(
+        <component>
+    )
+
+
+### PROJECT STRUCTURE of vite
+
+- package.json
+    dependencies
+        react and react-dom only
+        no react-scripts
+- index.html inside root folder
+- not in public folder like in create-react-app
+- direct <script> tag inside index.html
+- main.jsx == index.js
+- App.jsx == app.js
+
+
+### CREATING COMPONENT IN VITE
+
+- Chai.js
+- ERROR :
+Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+
+- default config of vite says component must be jsx
+- component must start from uppercase letter
+- only 1 html element would be returned from a component
+
+### 1 HTML ELEMENT RETURNED
+
+- wrap all elements inside div
+- OR use fragments (empty tags)
+
+### DOIONG SAME IN create-react-app
+
+- chai component was empty on page source
+- WARNING: 'chai' is defined but never used
+- after uppercase first alphabet, we successfully run the project
+
+### AT ALL,
+- component names must be capitalized in both create-react-app and vite
+- some libraries may force to keep extension as .jsx
+- in create-react-app
+    - if html returned, name it .jsx
+    - if only js code, no html code returned, name it .js
+- in vite
+    - name .jsx by default

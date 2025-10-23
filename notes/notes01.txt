@@ -1,0 +1,47 @@
+-------------------- REACT 01 --------------------
+
+WHY TO LEARN REACT??
+- hype, jobs, trend, build UI
+- makes easy to manage and build "complex frontend"
+- REACT is compiled into html,css,js at the end
+- most project don't need js in initial phase
+
+WHY REACT WAS CREATED??
+- in facebook
+- ghost(phantom) message problem
+- number icon of messages don't get updated
+- state(variables) -> JS and UI -> DOM
+- no consistency in UI
+- no sync b/w JS and DOM
+- khan academy and unsplash adopted react first
+
+MUST LEARN :
+- thread execution
+- execution context
+- functions execution along with memory mgmt
+- how JS works
+- how DOM works
+- browser inner working video
+
+REACT IS A LIBRARY
+
+TOPICS TO LEARN
+- core of react (state or UI manipulation, JSX(html into js))
+- component reusability
+- reusing of component (props)
+- how to propagate change (hooks)
+
+ADDITIONAL ADDON TO REACT
+- Router (React don't have router)
+- State mgmt (React don't have state mgmt)
+- redux, redux toolkit, zustand, context api
+- class based component
+    - legacy code
+- BAAS apps(backend as a service)
+    - social media clone, e-commerce app.....(appwrite, firebase, supabase etc..)
+
+AFTER REACT
+- react is not a complete solution in most cases
+- no SEO, browser render of JS, no routing
+- Framework
+- Next js, gatsby, remix

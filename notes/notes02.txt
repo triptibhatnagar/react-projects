@@ -1,0 +1,87 @@
+-------------------- REACT 02 --------------------
+
+NEEDED TOOLS - 
+vs code
+node js
+    node -v (to check node version)
+react documentation
+DOCUMENTATION - website: react.dev
+
+REACT + REACT-DOM => for web
+REACT + REACT-NATIVE => for app
+
+
+### MAKING REACT PROJECT ??
+
+- npm = node package manager
+- npx = node package executor [for direct use w/o installation]
+- create-react-app [bulky utility]
+---> npx create-react-app <project-name>
+- as it was bulky, we use bundlers like vite or parcel
+
+
+### EXPLORING FILE FOLDER STRUCTURE
+
+- cd <project-name>
+- open package.json : entry point [ name, version, dependencies ]
+- dependencies: versions of :-
+    testing library,
+    react,
+    react-dom,
+    react-scripts,
+    web-vitals [to check/track performance of your app]
+- scripts [run or ready the projects for production] :
+    start: in dev env,
+    build: in prod env,
+    test: to run all test cases, 
+    eject: eject application from react, now introducing new framework in my project
+- eslint [ red error lines ]
+- browserslist [ which browsers to work on ]
+
+
+### HOW TO RUN REACT PROJECT ??
+
+- run start script
+- on ls : package.json must be visible, now you can run start script
+---> npm run start
+- lets run build
+---> npm run build
+build folder is created
+- react projects are not SEO optimized [ nothing special visible on PAGE SOURCE]
+- [static assets, js etc]
+
+
+### USING BUNDLER - VITE
+
+- on ls : should be in root folder
+---> npm create vite@latest
+
+### EXPLORING FILE FOLDER STRUCTURE IN VITE
+
+- node_modules not in vite project
+- package.json: 
+    name,
+    version,
+    scripts - 
+        dev (npm run dev),
+        build (npm run build) etc..
+    dependencies - 
+        only react and react-dom
+    dev dependencies - used during dev only not prod
+
+
+### HOW TO RUN REACT PROJECT IN VITE ??
+
+---> cd <project-name>
+---> npm install
+---> npm run dev
+
+
+### CLEANING FILE FOLDER STRUCTURE CREATED FROM create-react-app
+
+- delete all folders of src except App.js and index.js
+
+
+### CLEANING FILE FOLDER STRUCTURE CREATED FROM create-react-app
+
+- delete all folders of src except App.jsx and main.jsx
