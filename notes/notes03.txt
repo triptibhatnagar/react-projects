@@ -30,7 +30,7 @@ index.html: html content
 - compares virtual dom with main dom
 - check differences and change them only
 - ReactDOM.createRoot(<where>)
-- broswer renders dom
+- browser renders dom
 - similarly, render html elements
 
 
@@ -56,7 +56,7 @@ index.html: html content
 ### AT ALL
 - html pg -> react area in it -> react components into it
 - html pg (index.html)
-- inject react (index.js -> root)   
+- inject react (index.js -> root)
     reactdom.createRoot(<select html element>)
 - render components upon that react area 
     root.render(
@@ -92,7 +92,7 @@ Failed to parse source for import analysis because the content contains invalid 
 - wrap all elements inside div
 - OR use fragments (empty tags)
 
-### DOIONG SAME IN create-react-app
+### DOING SAME IN create-react-app
 
 - chai component was empty on page source
 - WARNING: 'chai' is defined but never used

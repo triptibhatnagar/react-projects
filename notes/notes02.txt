@@ -82,6 +82,6 @@ build folder is created
 - delete all folders of src except App.js and index.js
 
 
-### CLEANING FILE FOLDER STRUCTURE CREATED FROM create-react-app
+### CLEANING FILE FOLDER STRUCTURE CREATED FROM vite
 
 - delete all folders of src except App.jsx and main.jsx

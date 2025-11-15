@@ -4,13 +4,13 @@ WHY TO LEARN REACT??
 - hype, jobs, trend, build UI
 - makes easy to manage and build "complex frontend"
 - REACT is compiled into html,css,js at the end
-- most project don't need js in initial phase
+- most project don't need reactjs in initial phase
 
 WHY REACT WAS CREATED??
 - in facebook
 - ghost(phantom) message problem
-- number icon of messages don't get updated
-- state(variables) -> JS and UI -> DOM
+-    number icon of messages don't get updated
+- state(variables) -> JS  UI -> DOM
 - no consistency in UI
 - no sync b/w JS and DOM
 - khan academy and unsplash adopted react first

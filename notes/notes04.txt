@@ -1,0 +1,22 @@
+-------------------- REACT 04 --------------------
+
+-> create your own react basic version
+
+- Selecting element
+- Creating root
+- Component which returns HTML element
+- Render component into root
+
+
+SUMMARIZE
+- created own react element
+    - container -> root
+    - render(elem, container) [a custom render method]
+    - created custom elem
+
+- main.jsx
+    - write a method in this file and render it, can be done in </> or ()
+    - react -> tree str, so use tree str (object) directly but didn't worked
+    - as it is html element wrapped inside () worked, but why not my object
+    - problem is my obj is custom, not following any syntax acc to react
+    - used React.createElement(<type, attributes, children, evaluated expressions>) [injection done by Babel]
