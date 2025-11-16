@@ -1,0 +1,90 @@
+-------------------- REACT 06 --------------------
+
+VIRTUAL DOM FIBRE RECONCILATION
+
+- is virtual dom still used in react ?? NOOOO
+- createRoot() 
+
+## BTS of createRoot()
+- create a dom tree like browser dom
+- compares its dom with main dom and updates only the UI changes
+- but browser repaints whole DOM(RELOADING)
+
+- REACT team thinks of : not immediately updating in UI, but with optimzed algo and waiting an instant
+
+## FIBRE
+- algorithm to update virtual DOM = REACT FIBER
+
+The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
+
+
+Other key features include the ability to pause, abort, or reuse work as new updates come in; the ability to assign priority to different types of updates; and new concurrency primitives.
+hydration  (injecting of js)
+
+## RECONCILIATION
+The algorithm React uses to diff one tree with another to determine which parts need to be changed.
+
+update
+A change in the data used to render a React app. Usually the result of `setState`. Eventually results in a re-render.
+
+~~~~~~~~~ Reconciliation is the algorithm behind what is popularly understood as the "virtual DOM.
+
+
+
+
+
+
+
+
+-----------------------------------------
+React Fiber, Reconciliation & Virtual DOM — Ekdum Simple Terms Me
+⭐ 1. Virtual DOM
+
+Virtual DOM = Browser DOM ka lightweight copy (memory me).
+
+React real DOM ko directly modify nahi karta (slow hota hai).
+
+Pehle virtual DOM banata hai → phir compare karke sirf jaha change hua ho wahi real DOM update karta hai.
+
+Isse app fast chalti hai.
+
+👉 Example:
+Tumhare room ka photo (virtual DOM) le kar changes mark karna → phir room me sirf wahi changes apply karna → pura room rebuild nahi karna.
+
+⭐ 2. Reconciliation
+
+Reconciliation = React ka process jisme wo naya virtual DOM aur purana virtual DOM compare karta hai.
+
+Matlab:
+
+Pehle app ka ek virtual DOM hota hai
+
+Update hone par naya virtual DOM banta hai
+
+React dono compare karta hai (diff algorithm)
+
+Sirf changed parts ko update karta hai
+
+👉 List me key isliye important hoti hai taaki React ko pata chal sake kaun sa item same hai aur kaunsa new.
+
+⭐ 3. React Fiber
+
+Fiber = React ka naya engine jo updates ko chote-chote parts me tod kar handle karta hai.
+
+Old React:
+
+Ek update aaya → pura kaam ek baar me karta tha → UI freeze ho sakti thi
+
+React Fiber:
+
+Kaam ko small pieces (fibers) me todta hai
+
+Kabhi bhi pause kar sakta hai
+
+Kabhi bhi resume kar sakta hai
+
+High priority tasks (animations, user typing) ko pehle karta hai
+
+Low priority work baad me karta hai
+
+👉 This makes React smoother, faster, aur better scheduling wala.

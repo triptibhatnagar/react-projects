@@ -1,0 +1,15 @@
+-------------------- REACT 05 --------------------
+
+### HOOKS
+
+- to perform action on <button>- -> onClick in js
+- onClick = {reference of function created is passed here}
+- problem: variable getting updated but not on UI [UI updation problem]
+
+- REACT will control UI updation, not us
+- => HOOKS for data updation
+
+- import { useState } from 'react'
+- useState( <default value> )
+- const [<variable name>, <function to set variable value>] = useState(<default value>)
+- setCounter(<new value>)
