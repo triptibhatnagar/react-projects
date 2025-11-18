@@ -1,3 +1,34 @@
 -------------------- REACT 08 --------------------
 
 ### REACT-SPECIFIC INTERVIEW QUESTION
+
+const [counter, setCounter] = useState(5)
+const addValue = () => {
+    setCounter(counter+1)
+    setCounter(counter+1)
+    setCounter(counter+1)
+    setCounter(counter+1)
+}
+
+what will be the value displayed after clicking on add button???
+
+ANS => counter+1 on 1 click
+
+
+UNDERLYING CONCEPT
+- useState sends updation in batches
+- so a batch will be created of these 4
+    setCounter(counter+1)
+    setCounter(counter+1)
+    setCounter(counter+1)
+    setCounter(counter+1)
+- u are doing same work again (u say ki areyy same hee toh kaam h)
+
+- SOLUTION
+- but what if i want to update it in same way
+    setCounter(() => {})   callback in setCounter
+    setCounter((prevCounter) => prevCounter+1)
+    prevCounter -> last updated state
+
+- through callback
+    its a new call after completing the work(here after increment)

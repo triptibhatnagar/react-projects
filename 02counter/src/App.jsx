@@ -10,8 +10,19 @@ function App() {
     // console.log("value added", Math.random()) 
     // console.log("clicked", counter)
     // counter = counter + 1
-    if(counter < 20)
-      setCounter(counter + 1)
+    
+    setCounter(counter + 1)
+
+    // INTERVIEW QUESTION
+    // setCounter(counter + 1)
+    // setCounter(counter + 1)
+    // setCounter(counter + 1)
+
+    // SOLUTION
+    // setCounter((prevCounter) => prevCounter+1)
+    // setCounter((prevCounter) => prevCounter+1)
+    // setCounter((prevCounter) => prevCounter+1)
+    // setCounter((prevCounter) => prevCounter+1)
   }
 
   const decValue = () => {
