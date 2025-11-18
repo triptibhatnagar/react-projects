@@ -1,0 +1,60 @@
+-------------------- REACT 07 --------------------
+## TAILWIND AND PROPS
+
+- 01 : Create your project
+    npm create vite@latest my-project
+    cd my-project
+
+- 02 : Install Tailwind CSS
+    npm install tailwindcss @tailwindcss/vite
+
+- 03 : Configure the Vite plugin
+vite.config.js
+    import tailwindcss from '@tailwindcss/vite'
+    plugins: [
+        tailwindcss(),
+    ],
+
+- 04 : Import Tailwind CSS
+    @import "tailwindcss";
+
+- 05 : Start your build process
+    npm run dev
+
+- 06 : Start using Tailwind in your HTML
+    <head>
+        ="stylesheet">
+    </head>
+    <body>
+        <h1 class="text-3xl font-bold underline">
+            Hello world!
+        </h1>
+    </body>
+
+
+- to pick images : pexels.com
+- to pick components : devui.io
+
+
+### PROPS
+- props make component reusable
+- separation of components on basis of its work in react, not on basis of technology
+
+- every .jsx has props parameter
+    function Card(props)
+- initially props is empty
+- CANT DO
+    <Card channel="hiteshhhsirr" myarr=[1,2,3]/>
+    <Card channel="hiteshhhsirr" myobj={key:value}/>
+- CAN DO
+    <Card username="hiteshhhsirr" obj={myObj}/>        (myObj passed as variable)
+
+- props is an OBJECT
+- properties can be accessible by props.<propname> like props.username
+
+- destructuring of object
+function Card({username})
+
+- giving default value
+    {btnText || "visit me"}
+    or for more readability
