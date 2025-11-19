@@ -1,0 +1,9 @@
+- style={{}}
+- variables can be directly used, no extra curly braces
+    style={{backgroundColor: color}}
+
+- behaviour of onClick
+- onClick expects a function, Not the returned value of a function
+- onClick = {setColor}  [function, but can't pass parameter "red"]
+- onClick = {setColor("red")}   [returned value of function]
+- onClick = {() => setColor("red")}     [calling function inside function , a callback]
