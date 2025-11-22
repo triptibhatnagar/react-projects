@@ -1,0 +1,105 @@
+-------------------- PASSWORD GENERATOR --------------------
+
+- one method being repeatedly used => optimized way : memoization
+- one method executed, but if some of it could be kept in memory : more optimized
+- copy hook (particular input field is copied only)
+
+- TASKS
+- methods run on:-
+    page reload
+    dependencies
+- optimized way
+- target on a particular element (eg - copy btn copies text)
+
+- all by hooks
+
+- length : useState
+- numallowed checkbox : useState
+- charallowed checkbox : useState
+- password : useState
+
+- USECALLBACK
+- useCallback is a React Hook that lets you cache a function definition between re-renders.
+- useCallback(fxn, dependenices)
+- useCallback(fn, [])
+
+- setPassword also passed as a dependency
+
+- USEEFFECT
+- useEffect(() => {})	    Har render ke baad chalega
+- useEffect(() => {}, [])	Sirf ek baar chalega
+- useEffect(() => {}, [x])	X change hone par chalega
+- Return function	        Cleanup ke liye
+
+
+
+### USESTATE, USEEFFECT, USECALLBACK - HOOKS USED IN THIS PROJECT
+
+1. useState
+- Purpose:
+    Component ke andar state (data) ko store aur update karne ke liye.
+- Important points:
+    useState() ek value aur usko update karne ka function deta hai.
+    State change hoti hai → component re-render hota hai.
+- Syntax:
+    const [value, setValue] = useState(initialValue);
+- Har state independent hoti hai (multiple useState allowed).
+
+2. useEffect
+- Purpose:
+    Component ke render hone ke baad side effects chalane ke liye.
+    (Side effects = API call, timer, event listener, subscriptions)
+- Important points:
+    Runs after render.
+    Dependency array decide karta hai kab chalega:
+    - useEffect(() => {}) → har render ke baad
+    - useEffect(() => {}, []) → sirf 1 baar
+    - useEffect(() => {}, [state]) → jab state change ho
+    - Cleanup function (return () => {}) un effects ko stop/cleanup karta hai.
+
+- Syntax:
+    useEffect(() => {
+    // effect
+    return () => {
+        // cleanup
+    };
+    }, [dependencies]);
+
+3. useCallback
+- Purpose: 
+    Ek function ko memoize (yaad) karna taaki wo har render me dobara na bane.
+- Important points:
+    Performance optimization ke liye use hota hai.
+    Especially useful jab function child component ko pass kar rahe ho.
+    Agar dependencies nahi badalti, function same rehta hai.
+- Syntax:
+    const fn = useCallback(() => {
+    // function code
+    }, [dependencies]);
+
+- dependencies:
+    ki inn inn se baat ho rahi hai
+
+
+Normal variable:
+Render ke baad reset
+Value persist nahi hoti
+
+useRef:
+Value persist rehti hai
+UI re-render nahi hota
+
+USEREF - Aisi value rakhna jo badlne par re-render na ho + DOM access.
+
+### SUMMARY
+1. variable in useState
+    length, charAllowed, numAllowed, password
+2. passwordGenerator method, setPassword
+    optimized passwordGenerator(jitna ho sake memorize function) - useCallback
+    depedencies of callback - jinse uss fxn ki baat ho rahi h or related things
+    setPassword as dependency in passwordGenerator - optimization, nhi b doge toh chlega
+3. useEffect
+    when to run the function
+4. copy password to clipboard
+5. for visually nice
+    used useRef to show what is being copied
